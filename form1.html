@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+   font-family: Arial, Helvetica, sans-serif;
+   width: 60%;
+  } 
+
+* {
+  box-sizing: border-box;
+}
+
+  .container {
+   padding: 16px;
+  background-color: black;
+  width: 45%;
+  margin-left: 450px;
+  height: 525px;
+  margin-top: 40px;
+}
+h1{
+    color: #4CAF50;
+    margin-left: 75px;
+    font-size: 30px;
+}
+
+input[type=text], input[type=number],input[type=email],input[type=textarea]  {
+  width: 60%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 2px solid green;
+  background: #f1f1f1;
+  border-radius: 3%;
+  margin-left: 65px;
+}
+input[type=textarea]{
+    height: 60px;;
+}
+input[type=submit]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  opacity: 0.9;
+  margin-left: 65px;
+}
+</style>
+
+<script>
+    function validation()
+    {
+            var first = document.forms["formadd"]["fname"].value;
+            var last = document.forms["formadd"]["lname"].value;
+            var mob = document.forms["formadd"]["num"].value;
+            var mail = document.forms["formadd"]["email"].value;
+            var mesg = document.forms["formadd"]["msg"].value;
+  if (first == "") {
+    alert("Please Enter First Name");
+    return false;
+  }
+
+  if (last == "") {
+    alert("Please Enter Last Name");
+    return false;
+  }
+
+  if (mob == "") {
+    alert("Please Enter Mobile Number");
+    return false;
+  }
+
+  if (mob.length<=10) {
+    alert("Enter a valid 10 digit mobile");
+    return false;
+  }
+
+  if (mail == "") {
+    alert("Please Enter Email");
+    return false;
+  }
+
+  if (mob == "") {
+    alert("Please Enter a 10 digit Mobile Number");
+    return false;
+  }
+
+  if (mesg == "") {
+    alert("Please Enter Message");
+    return false;
+  }
+    }
+  </script>
+</head>
+<body>
+<form name="formadd" onsubmit="return validation()" method="post">
+  <div class="container">
+      <div class="row justify-content-md-center">
+    <h1>Simple Form</h1>
+    <input type="text" name="fname" value="" placeholder="First Name"  /><br>
+    <input type="text" name="lname" value="" placeholder="Last Name"/><br>
+    <input type="number" name="num" value="" placeholder="Mobile Number"/><br>
+    <input type="email" name="email" value="" placeholder="E-Mail"/><br>
+    <input type="textarea" name="msg" value="" placeholder="Message"/><br>
+    <input type="submit" value="Submit">
+    </div>
+    </div>
+</form>
+</body>
+</html>
+
+737886236
